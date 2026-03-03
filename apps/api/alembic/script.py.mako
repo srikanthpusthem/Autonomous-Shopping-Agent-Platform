@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 """${message}
 
 Revision ID: ${up_revision}

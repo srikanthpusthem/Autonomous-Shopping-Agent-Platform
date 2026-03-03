@@ -1,0 +1,136 @@
+{
+  "products": [
+    {
+      "provider": "mock_amazon",
+      "product_id": "amz-headphones-100",
+      "title": "PulseFit Wireless Sport Headphones",
+      "brand": "PulseFit",
+      "price": 89.99,
+      "rating": 4.4,
+      "review_count": 1320,
+      "currency": "USD",
+      "attributes": {
+        "category": "headphones",
+        "use_case": "gym"
+      },
+      "description": "Sweat-resistant gym headphones with secure fit."
+    },
+    {
+      "provider": "mock_amazon",
+      "product_id": "amz-headphones-101",
+      "title": "AeroBeat ANC Headphones",
+      "brand": "AeroBeat",
+      "price": 129.99,
+      "rating": 4.6,
+      "review_count": 860,
+      "currency": "USD",
+      "attributes": {
+        "category": "headphones",
+        "use_case": "travel"
+      },
+      "description": "Over-ear ANC for commute and office use."
+    },
+    {
+      "provider": "mock_amazon",
+      "product_id": "amz-shoes-200",
+      "title": "StrideMax Comfort Running Shoes",
+      "brand": "StrideMax",
+      "price": 109.0,
+      "rating": 4.2,
+      "review_count": 540,
+      "currency": "USD",
+      "attributes": {
+        "category": "shoes",
+        "use_case": "gym"
+      },
+      "description": "Cushioned running shoes for long sessions."
+    }
+  ],
+  "details": {
+    "amz-headphones-100": {
+      "description": "IPX5 sweat resistance, 10-hour battery, secure ear hooks.",
+      "specs": {
+        "battery": "10h",
+        "water_resistance": "IPX5",
+        "weight": "24g"
+      }
+    },
+    "amz-headphones-101": {
+      "description": "Hybrid ANC, 30-hour battery, foldable design.",
+      "specs": {
+        "battery": "30h",
+        "anc": "hybrid",
+        "weight": "255g"
+      }
+    },
+    "amz-shoes-200": {
+      "description": "Breathable knit upper and responsive foam midsole.",
+      "specs": {
+        "drop": "8mm",
+        "weight": "272g",
+        "support": "neutral"
+      }
+    }
+  },
+  "reviews": {
+    "amz-headphones-100": [
+      {
+        "title": "Great fit for workouts",
+        "body": "Stays put during lifting and cardio. Good value.",
+        "rating": 5,
+        "verified_purchase": true
+      },
+      {
+        "title": "Battery is average",
+        "body": "Solid sound, but I wish battery lasted longer.",
+        "rating": 4,
+        "verified_purchase": true
+      }
+    ],
+    "amz-headphones-101": [
+      {
+        "title": "Excellent noise cancelling",
+        "body": "Perfect for flights and office focus.",
+        "rating": 5,
+        "verified_purchase": true
+      },
+      {
+        "title": "Bulky for gym",
+        "body": "Sound quality is great but too warm for workouts.",
+        "rating": 3,
+        "verified_purchase": true
+      }
+    ],
+    "amz-shoes-200": [
+      {
+        "title": "Comfort first",
+        "body": "Very comfortable underfoot, especially on treadmill.",
+        "rating": 5,
+        "verified_purchase": true
+      },
+      {
+        "title": "Durability concern",
+        "body": "Outsole wore down in about 4 months.",
+        "rating": 3,
+        "verified_purchase": false
+      }
+    ]
+  },
+  "delivery": {
+    "amz-headphones-100": {
+      "eta_days": 1,
+      "shipping_cost": 0,
+      "method": "Prime Next-Day"
+    },
+    "amz-headphones-101": {
+      "eta_days": 2,
+      "shipping_cost": 0,
+      "method": "Prime Two-Day"
+    },
+    "amz-shoes-200": {
+      "eta_days": 3,
+      "shipping_cost": 4.99,
+      "method": "Standard"
+    }
+  }
+}

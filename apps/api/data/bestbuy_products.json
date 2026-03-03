@@ -1,0 +1,136 @@
+{
+  "products": [
+    {
+      "provider": "mock_bestbuy",
+      "product_id": "bb-headphones-300",
+      "title": "SoundArc Sport Buds",
+      "brand": "SoundArc",
+      "price": 79.99,
+      "rating": 4.1,
+      "review_count": 420,
+      "currency": "USD",
+      "attributes": {
+        "category": "headphones",
+        "use_case": "gym"
+      },
+      "description": "Compact true wireless buds for daily workouts."
+    },
+    {
+      "provider": "mock_bestbuy",
+      "product_id": "bb-headphones-301",
+      "title": "Clarity Pro Wireless Headphones",
+      "brand": "Clarity",
+      "price": 149.99,
+      "rating": 4.7,
+      "review_count": 1200,
+      "currency": "USD",
+      "attributes": {
+        "category": "headphones",
+        "use_case": "work"
+      },
+      "description": "Balanced tuning with multipoint pairing."
+    },
+    {
+      "provider": "mock_bestbuy",
+      "product_id": "bb-shoes-401",
+      "title": "KineticFlex Cross Trainer",
+      "brand": "Kinetic",
+      "price": 119.5,
+      "rating": 4.3,
+      "review_count": 350,
+      "currency": "USD",
+      "attributes": {
+        "category": "shoes",
+        "use_case": "gym"
+      },
+      "description": "Cross-training shoe for mixed gym workouts."
+    }
+  ],
+  "details": {
+    "bb-headphones-300": {
+      "description": "Low-latency mode, 7-hour battery, IPX4 splash resistance.",
+      "specs": {
+        "battery": "7h",
+        "water_resistance": "IPX4",
+        "weight": "16g"
+      }
+    },
+    "bb-headphones-301": {
+      "description": "40-hour battery, EQ presets, USB-C fast charging.",
+      "specs": {
+        "battery": "40h",
+        "fast_charge": "yes",
+        "weight": "240g"
+      }
+    },
+    "bb-shoes-401": {
+      "description": "Lateral support and durable outsole for HIIT sessions.",
+      "specs": {
+        "support": "lateral",
+        "outsole": "high abrasion",
+        "weight": "290g"
+      }
+    }
+  },
+  "reviews": {
+    "bb-headphones-300": [
+      {
+        "title": "Good budget pick",
+        "body": "Great for the price and comfortable for 1-hour workouts.",
+        "rating": 4,
+        "verified_purchase": true
+      },
+      {
+        "title": "Connection drops",
+        "body": "Occasional dropouts in crowded gyms.",
+        "rating": 2,
+        "verified_purchase": true
+      }
+    ],
+    "bb-headphones-301": [
+      {
+        "title": "Best all-rounder",
+        "body": "Excellent sound and battery for daily use.",
+        "rating": 5,
+        "verified_purchase": true
+      },
+      {
+        "title": "Premium price",
+        "body": "Worth it if you value sound quality over price.",
+        "rating": 4,
+        "verified_purchase": true
+      }
+    ],
+    "bb-shoes-401": [
+      {
+        "title": "Stable for HIIT",
+        "body": "Good grip and no slipping during agility drills.",
+        "rating": 5,
+        "verified_purchase": true
+      },
+      {
+        "title": "A bit stiff",
+        "body": "Needs break-in time, then gets better.",
+        "rating": 3,
+        "verified_purchase": true
+      }
+    ]
+  },
+  "delivery": {
+    "bb-headphones-300": {
+      "eta_days": 2,
+      "shipping_cost": 5.99,
+      "method": "Expedited"
+    },
+    "bb-headphones-301": {
+      "eta_days": 1,
+      "shipping_cost": 9.99,
+      "method": "Same Day"
+    },
+    "bb-shoes-401": {
+      "eta_days": 3,
+      "shipping_cost": 0,
+      "method": "Free Standard"
+    }
+  }
+}

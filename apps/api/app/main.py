@@ -1,8 +1,11 @@
 from fastapi import FastAPI
 
-app = FastAPI(title="Shopping Copilot API")
+from app.api.router import api_router
+from app.core.config import get_settings
+from app.core.logging import configure_logging
 
+settings = get_settings()
+configure_logging()
 
-@app.get("/health")
-def health() -> dict[str, str]:
-    return {"status": "ok"}
+app = FastAPI(title=settings.app_name, debug=settings.app_debug)
+app.include_router(api_router)

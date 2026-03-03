@@ -15,6 +15,9 @@ class JsonFormatter(logging.Formatter):
             payload["request_id"] = record.request_id
         if hasattr(record, "run_id"):
             payload["run_id"] = record.run_id
+        for key in ("method", "path", "status_code", "duration_ms"):
+            if hasattr(record, key):
+                payload[key] = getattr(record, key)
         return json.dumps(payload)
 
 

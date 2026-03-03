@@ -1,4 +1,4 @@
-.PHONY: infra-up infra-down api-dev web-dev
+.PHONY: infra-up infra-down api-dev web-dev api-lint api-test web-lint
 
 infra-up:
 	docker compose -f infra/docker-compose.yml up -d
@@ -11,3 +11,12 @@ api-dev:
 
 web-dev:
 	cd apps/web && pnpm dev --host --port 5173
+
+api-lint:
+	cd apps/api && uv run --extra dev ruff check . && uv run --extra dev ruff format --check .
+
+api-test:
+	cd apps/api && uv run --extra dev pytest
+
+web-lint:
+	cd apps/web && pnpm lint

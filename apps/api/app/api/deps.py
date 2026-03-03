@@ -18,7 +18,9 @@ def get_current_user(
 ) -> User:
     user_id = decode_access_token(credentials.credentials)
     if user_id is None:
-        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid authentication")
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid authentication"
+        )
 
     user = db.scalar(select(User).where(User.id == user_id))
     if user is None:

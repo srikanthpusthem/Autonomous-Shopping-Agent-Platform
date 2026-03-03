@@ -3,7 +3,15 @@ from __future__ import annotations
 from uuid import UUID
 
 import asyncio
-from fastapi import APIRouter, BackgroundTasks, Depends, HTTPException, WebSocket, WebSocketDisconnect, status
+from fastapi import (
+    APIRouter,
+    BackgroundTasks,
+    Depends,
+    HTTPException,
+    WebSocket,
+    WebSocketDisconnect,
+    status,
+)
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
@@ -62,7 +70,9 @@ async def run_events_websocket(websocket: WebSocket, run_id: UUID) -> None:
     await run_event_manager.connect(run_id, websocket)
     db = SessionLocal()
     try:
-        history = db.scalars(select(RunEvent).where(RunEvent.run_id == run_id).order_by(RunEvent.id.asc())).all()
+        history = db.scalars(
+            select(RunEvent).where(RunEvent.run_id == run_id).order_by(RunEvent.id.asc())
+        ).all()
         for event in history:
             payload = AgentEventPayload(
                 run_id=run_id,

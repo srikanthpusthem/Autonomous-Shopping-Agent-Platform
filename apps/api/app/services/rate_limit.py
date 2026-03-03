@@ -20,7 +20,9 @@ class InMemoryRateLimiter:
         with self._lock:
             history = [stamp for stamp in self._requests[key] if stamp >= cutoff]
             if len(history) >= self.max_requests:
-                raise HTTPException(status_code=429, detail="Too many run requests. Try again soon.")
+                raise HTTPException(
+                    status_code=429, detail="Too many run requests. Try again soon."
+                )
             history.append(now)
             self._requests[key] = history
 

@@ -1,5 +1,3 @@
-from __future__ import annotations
-
 """initial schema
 
 Revision ID: 20260302_0001
@@ -108,7 +106,9 @@ def upgrade() -> None:
         ["external_product_id"],
         unique=False,
     )
-    op.create_index("ix_product_snapshots_provider", "product_snapshots", ["provider"], unique=False)
+    op.create_index(
+        "ix_product_snapshots_provider", "product_snapshots", ["provider"], unique=False
+    )
     op.create_index("ix_product_snapshots_run_id", "product_snapshots", ["run_id"], unique=False)
 
     op.create_table(

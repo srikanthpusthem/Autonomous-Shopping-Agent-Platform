@@ -14,7 +14,9 @@ class DecisionAgent:
             price_score = 1 / max(row["candidate"].price, 1)
             rating_score = row["candidate"].rating / 5
             delivery_score = 1 / max(row["delivery"].eta_days, 1)
-            durability_penalty = 0.2 if "durability_warning" in row["insight"].warning_flags else 0.0
+            durability_penalty = (
+                0.2 if "durability_warning" in row["insight"].warning_flags else 0.0
+            )
             durability_score = max(0.1, 1 - durability_penalty)
             value_score = min(1.0, row["deal"].value_score / 5)
 
@@ -26,7 +28,9 @@ class DecisionAgent:
                 + 0.1 * value_score
             )
 
-            confidence = max(0.35, min(0.95, round(0.55 + (row["candidate"].review_count / 5000), 2)))
+            confidence = max(
+                0.35, min(0.95, round(0.55 + (row["candidate"].review_count / 5000), 2))
+            )
             ranked.append(
                 RankedProduct(
                     provider=row["candidate"].provider,

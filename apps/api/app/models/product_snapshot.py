@@ -22,6 +22,8 @@ class ProductSnapshot(Base):
     price: Mapped[float | None] = mapped_column(Numeric(10, 2), nullable=True)
     rating: Mapped[float | None] = mapped_column(Numeric(3, 2), nullable=True)
     raw_payload: Mapped[dict] = mapped_column(JSONB, default=dict)
-    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=lambda: datetime.now(UTC))
+    created_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), default=lambda: datetime.now(UTC)
+    )
 
     run = relationship("Run", back_populates="snapshots")

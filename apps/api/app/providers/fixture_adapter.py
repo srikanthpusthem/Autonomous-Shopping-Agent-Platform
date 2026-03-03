@@ -11,7 +11,9 @@ from app.schemas import DeliveryInfo, ProductCandidate, ProductDetails, Review, 
 
 
 class FixtureMarketplaceAdapter(MarketplaceAdapter):
-    def __init__(self, provider_name: str, fixture_path: Path, timeout_seconds: float = 1.5) -> None:
+    def __init__(
+        self, provider_name: str, fixture_path: Path, timeout_seconds: float = 1.5
+    ) -> None:
         self.provider_name = provider_name
         self.timeout_seconds = timeout_seconds
         self.fixture_path = fixture_path
@@ -92,7 +94,10 @@ class FixtureMarketplaceAdapter(MarketplaceAdapter):
                 raise ProviderNotFoundError(
                     f"Reviews missing for product '{product_id}' ({self.provider_name})"
                 )
-            return [Review(provider=self.provider_name, product_id=product_id, **row) for row in review_rows]
+            return [
+                Review(provider=self.provider_name, product_id=product_id, **row)
+                for row in review_rows
+            ]
 
         return await self._with_timeout(_reviews())
 
